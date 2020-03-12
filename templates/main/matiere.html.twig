@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+<h2>Modifier la matiere </h2>
+
+{{ form_start(form) }}
+    {{ form_rest(form) }}
+<select name="categorie">
+  {% for matiere in matieres %}
+    <option value='{{matiere.nom}}'>{{matiere.coef}}</option>
+  {% endfor %}
+</select>
+
+{{form_end(form)}}
+
+{% endblock %}
